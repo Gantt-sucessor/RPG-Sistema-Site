@@ -1497,7 +1497,7 @@
   }
   function StepPericias({ char, patch }) {
     const trainedDef = getOriginEffectiveTrainedSkills(char);
-    const intelecto = char.attrs.intelecto || 0;
+    const intelecto = computeFinalAttrs(char).intelecto || 0;
     const fixedSkills = (trainedDef == null ? void 0 : trainedDef.fixed) || [];
     const choiceOneOf = (trainedDef == null ? void 0 : trainedDef.choiceOneOf) || null;
     const choiceCount = (trainedDef == null ? void 0 : trainedDef.choiceCount) || 0;
